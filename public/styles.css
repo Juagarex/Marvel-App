@@ -6,8 +6,7 @@ body{
 
 
 header{
-    display: flex!important;
-    width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #202020;
@@ -17,8 +16,8 @@ header{
 header a{
     text-decoration: none;
     color: #fff;
+    padding: 20px;
     font-size: 25px;
-    margin: 20px;
 }
 
 header a img{
@@ -79,13 +78,3 @@ header a img{
     color: #f4f4f4;
 
  }
-
-
-
-
- img.img-thumbnail {
-    width: 80%;
-    height: 80%;
-  }
-
-  
