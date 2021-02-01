@@ -8,14 +8,16 @@ const marvelSeries = {
         fetch(urlAPI)
             .then(res => res.json())
             .then((json) => {
-                for (const hero of json.data.results) {
-                    let urlHero = hero.urls[0].url;
+                for (const serie of json.data.results) {
+                    let urlHero = serie.urls[0].url;
                     contentHTML += `
-              <div class="col-md-4">
+              <div class="col-md-3 p-3 card-m">
                   <a href="${urlHero}" target="_blank">
-                    <img src="${hero.thumbnail.path}.${hero.thumbnail.extension}" alt="${hero.name}" class="img-thumbnail">
+                    <img src="${serie.thumbnail.path}.${serie.thumbnail.extension}" alt="${serie.name}" class="img-thumbnail">
                   </a>
-                  <h3 class="title">${hero.title}</h3>
+                  <button type="button" class="btn btn-primary" id="btn-description">
+        ${serie.title}
+    </button>
               </div>`;
                 }
                 container.innerHTML = contentHTML;
